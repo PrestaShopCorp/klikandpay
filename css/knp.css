@@ -1,0 +1,36 @@
+
+img.edit{ cursor: pointer;}
+img.remove{ cursor: not-allowed; }
+.drophover{ background: #c0c0c0; }
+.menu-zone-container{ float: left;width: 200px; padding: 0 5px; }
+.menu-zone{ width: 200px; border: 1px solid #000; }
+.hide{ display: none; }
+
+#knptabmenu li { border: 1px solid #000; border-bottom: none; border-left: none; float: left; padding: 5px; cursor: pointer; list-style-type: none;}
+#knptabmenu li:hover, .knptabmenu-current { background: #D6A;}           
+#knptabmenu li:first-child { border-left: 1px solid #000;}   
+#menu-style { height:200px; width: 870px; padding: 10px;}
+
+#main-form fieldset{ margin: 15px 0; text-align: left;}
+#main-form .center{ padding-bottom: 10px; margin-bottom: 10px; }
+#main-form .center p{ font-size: 11px; font-style: italic;}
+#main-form a{ color: #0D88C3;}
+#main-form a.button{ color: #333;}
+#main-form .information{ display: block; clear: both; margin-bottom: 25px;}
+#main-form .information b{ padding-bottom: 5px; display: block; text-decoration: underline; color: #0D88C3;}
+#main-form .information span{ clear: both; display: block;}
+
+#tabs{ float: left; width: 100%; background: #f4f4f4; padding: 10px;}
+#tabs ul.tab{ float: left; width: 100%; text-align: center; margin: 20px 0; padding: 0;}
+#tabs ul.tab li{ display: inline-block; margin: 7px 0;}
+#tabs ul.tab li a{ margin: 0 5px; }
+#tabs ul.tab li a.selected{ border: none; }
+#tabs .tab-block{ text-align: left;}
+#tabs .tab-block form{ display: inline-block; width: 100%;}
+
+.bootstrap #tabs{ border-radius: 5px; float: none; margin-bottom: 20px;}
+.bootstrap #tabs ul.tab li a{ padding: 6px 10px; background: #fff;}
+.bootstrap #tabs ul.tab li a:hover, .bootstrap #tabs ul.tab li a:focus{ text-decoration: none;}
+.bootstrap #tabs ul.tab li a.selected{ border-left: 5px solid #8BC954; color: #71B238; padding: 6px 10px 6px 5px;}
+.bootstrap #vkey{ width: 100% !important;}
+.bootstrap #main-form fieldset{ padding: 25px 0; margin: 25px 0;}
