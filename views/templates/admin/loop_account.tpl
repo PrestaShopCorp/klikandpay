@@ -27,7 +27,7 @@
                 <input type="text" name="sellerid" id="sellerid" value="{if $account != 0}{$account.sellerid|escape:'htmlall':'UTF-8'}{/if}" />
                 <p class="clear">
 		    {l s='Set the sellerid' mod='klikandpay'}
-		    <a href="https://www.klikandpay.com/marchands/index.cgi" target="_blank">{l s='Create an account' mod='klikandpay'}</a>
+		    <a href="https://www.klikandpay.com/fr/contact/ouvrir_compte.html" target="_blank">{l s='Create an account' mod='klikandpay'}</a>
                 </p>
             </div>
 
@@ -36,7 +36,7 @@
 	    <div class="margin-form">
 		{$i = 1}
 		{foreach $currencies as $currency}
-		    <input type="radio" id="currency" name="currency" value="{$currency.id_currency}" {if ($account != 0 && $account.currency == $currency.id_currency) || ($account == 0 && $account.currency != $currency.id_currency && $i == 1)}checked="checked"{/if}) /> {$currency.iso_code}
+		    <input type="radio" id="currency" name="currency" value="{$currency.id_currency}" {if ($account != 0 && $account.currency == $currency.id_currency) || ($account == 0 && $account.currency != $currency.id_currency && $i == 1)}checked="checked"{/if}) /> {$currency.iso_code|escape:'htmlall'}
 		{$i = $i + 1}
 		{/foreach}
 		<p class="clear">{l s='Choose the currency that this account will support' mod='klikandpay'}</p>

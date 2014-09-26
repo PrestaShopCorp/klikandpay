@@ -62,7 +62,7 @@
 	<li><a id="tabs-add" class="tab-selector button" href="#add">{l s='Add account' mod='klikandpay'}</a></li>
 	
 	{foreach $accounts as $account}  
-	    <li><a id="tabs-{$account.id_account}" class="tab-selector button" href="#{$account.id_account}">{l s='Manage account' mod='klikandpay'} {$account.sellerid} - {$account.currencyName} - {if $account.3ds == 1}{l s='With 3D Secure' mod='klikandpay'}{else}{l s='No 3D Secure' mod='klikandpay'}{/if}</a></li>
+	    <li><a id="tabs-{$account.id_account|escape:'htmlall'}" class="tab-selector button" href="#{$account.id_account|escape:'htmlall'}">{l s='Manage account' mod='klikandpay'} {$account.sellerid|escape:'htmlall'} - {$account.currencyName|escape:'htmlall'} - {if $account.3ds|escape:'htmlall' == 1}{l s='With 3D Secure' mod='klikandpay'}{else}{l s='No 3D Secure' mod='klikandpay'}{/if}</a></li>
 	{/foreach} 
   </ul>
 

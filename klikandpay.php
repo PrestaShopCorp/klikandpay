@@ -45,7 +45,7 @@ class KlikAndPay extends PaymentModule
 		$this->name = 'klikandpay';
 		$this->tab = 'payments_gateways';
 		$this->author = 'Klik&Pay';
-		$this->version = '3.8';
+		$this->version = '3.9';
 		
 
 		parent::__construct();
@@ -172,6 +172,29 @@ class KlikAndPay extends PaymentModule
 			);
 
 			$this->setConfig($a_data); // Enregistrement des données
+
+			Tools::redirectAdmin("$request_uri&conf=6#conf"); // Redirection avec confirmation
+		}
+		if (Tools::isSubmit('generateVkey'))
+		{
+			$vkey = "";
+			$values = array("0", "1", "2", "3", "4", "5",
+			    "6", "7", "8", "9", "A", "Z",
+			    "E", "R", "T", "Y", "U", "I",
+			    "O", "P", "Q", "S", "D", "F",
+			    "G", "H", "J", "K", "L", "M",
+			    "W", "X", "C", "V", "B", "N");
+
+			for ($i = 0; $i < 64; $i++) {
+			    $index = rand(0, 35);
+			    $vkey .= $values[$index];
+			}
+			
+			$xdata = $this->getConfig(); // On récpère les paramètres du module
+			 
+			$xdata['vkey'] = $vkey;
+
+			$this->setConfig($xdata); // Enregistrement des données
 
 			Tools::redirectAdmin("$request_uri&conf=6#conf"); // Redirection avec confirmation
 		}

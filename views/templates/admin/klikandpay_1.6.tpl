@@ -78,23 +78,7 @@
 
 		<p class="help-block">
 		    {l s='vkey will be used to encrypt data. Click' mod='klikandpay'}
-		    <a onclick="return false" id="vkey-gen" href="#">{l s='here' mod='klikandpay'}</a> {l s='to generate one' mod='klikandpay'}
-		    <script type="text/javascript">
-			$("#vkey-gen").click(function() {
-			    var vkey = "";
-			    var values = ["0", "1", "2", "3", "4", "5",
-				"6", "7", "8", "9", "A", "Z",
-				"E", "R", "T", "Y", "U", "I",
-				"O", "P", "Q", "S", "D", "F",
-				"G", "H", "J", "K", "L", "M",
-				"W", "X", "C", "V", "B", "N"];
-			    for (i = 0; i < 64; i++) {
-				index = Math.round(Math.random() * 35);
-				vkey += values[index];
-			    }
-			    $("#vkey").val(vkey);
-			});
-		    </script>
+		    <input type="submit" id="generateVkey" name="generateVkey" value="{l s='here' mod='klikandpay'}" class="button" /> {l s='to generate one' mod='klikandpay'}
 		</p>
 	    </div>
 	</div>
