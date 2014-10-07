@@ -39,7 +39,7 @@
 	    <div class="col-lg-10">
 		{$i = 1}
 		{foreach $currencies as $currency}
-		    <input type="radio" id="currency" name="currency" value="{$currency.id_currency}" {if ($account != 0 && $account.currency == $currency.id_currency) || ($account == 0 && $account.currency != $currency.id_currency && $i == 1)}checked="checked"{/if} /> {$currency.iso_code|escape:'htmlall'}
+		    <input type="radio" id="currency" name="currency" value="{$currency.id_currency|escape:'htmlall'}" {if ($account != 0 && $account.currency == $currency.id_currency) || ($account == 0 && $account.currency != $currency.id_currency && $i == 1)}checked="checked"{/if} /> {$currency.iso_code|escape:'htmlall'}
 		    {$i = $i + 1}
 		{/foreach}
 		<p class="help-block">{l s='Choose the currency that this account will support' mod='klikandpay'}</p>
