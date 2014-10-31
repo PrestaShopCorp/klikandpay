@@ -2,7 +2,7 @@
         <module>
             <name>klikandpay</name>
             <displayName><![CDATA[KlikAndPay]]></displayName>
-            <version><![CDATA[3.9]]></version>
+            <version><![CDATA[3.10]]></version>
             <description><![CDATA[Permet &agrave; vos clients de payer par Klik&amp;Pay]]></description>
             <author><![CDATA[Klik&amp;Pay]]></author>
             <tab><![CDATA[payments_gateways]]></tab>

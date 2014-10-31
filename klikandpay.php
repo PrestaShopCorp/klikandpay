@@ -45,7 +45,7 @@ class KlikAndPay extends PaymentModule
 		$this->name = 'klikandpay';
 		$this->tab = 'payments_gateways';
 		$this->author = 'Klik&Pay';
-		$this->version = '3.9';
+		$this->version = '3.10';
 		
 
 		parent::__construct();

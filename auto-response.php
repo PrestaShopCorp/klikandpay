@@ -182,6 +182,7 @@ if (Validate::isLoadedObject($cart) && $signature == $localsignature)
 
 					echo 'OK ';
 				}
+				Configuration::updateValue('KLIKANDPAY_CONFIGURATION_OK', true);
 				break;
 
 			case 'AWAITING':
